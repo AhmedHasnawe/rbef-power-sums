@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+
+# Visual Studio / .NET
+.vs/
+bin/
+obj/
+*.user
