@@ -1,0 +1,50 @@
+<Window x:Class="RbefCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="حاسبة RBEF" Height="680" Width="940"
+        FlowDirection="RightToLeft" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <TabControl>
+            <!-- Tab 1: Bernoulli number -->
+            <TabItem Header="عدد برنولي">
+                <DockPanel Margin="8">
+                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,6">
+                        <TextBlock Text="رتبة العدد n:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                        <TextBox x:Name="TxtN" Width="80" Text="100" FlowDirection="LeftToRight"
+                                 VerticalContentAlignment="Center" KeyDown="TxtN_KeyDown"/>
+                        <CheckBox x:Name="ChkPlus" Content="استخدام B1 = +1/2 (قيمة RBEF)"
+                                  VerticalAlignment="Center" Margin="14,0,0,0"/>
+                        <Button x:Name="BtnBernoulli" Content="احسب" Width="80" Margin="14,0,0,0"
+                                Click="BtnBernoulli_Click"/>
+                        <Button Content="نسخ" Width="60" Margin="8,0,0,0" Click="CopyOut1_Click"/>
+                        <Button Content="حفظ..." Width="60" Margin="8,0,0,0" Click="SaveOut1_Click"/>
+                    </StackPanel>
+                    <TextBlock x:Name="Status1" DockPanel.Dock="Top" Margin="0,0,0,6"
+                               Text="أدخل n (من 0 إلى 1000) ثم اضغط احسب."/>
+                    <TextBox x:Name="Out1" IsReadOnly="True" TextWrapping="Wrap" FontFamily="Consolas"
+                             FontSize="14" FlowDirection="LeftToRight" VerticalScrollBarVisibility="Auto"/>
+                </DockPanel>
+            </TabItem>
+
+            <!-- Tab 2: generator row -->
+            <TabItem Header="مولّد المعاملات">
+                <DockPanel Margin="8">
+                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,6">
+                        <TextBlock Text="الأس m:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                        <TextBox x:Name="TxtM" Width="80" Text="8" FlowDirection="LeftToRight"
+                                 VerticalContentAlignment="Center" KeyDown="TxtM_KeyDown"/>
+                        <Button x:Name="BtnGenerator" Content="احسب" Width="80" Margin="14,0,0,0"
+                                Click="BtnGenerator_Click"/>
+                        <Button Content="نسخ" Width="60" Margin="8,0,0,0" Click="CopyOut2_Click"/>
+                        <Button Content="حفظ..." Width="60" Margin="8,0,0,0" Click="SaveOut2_Click"/>
+                    </StackPanel>
+                    <TextBlock x:Name="Status2" DockPanel.Dock="Top" Margin="0,0,0,6"
+                               FlowDirection="LeftToRight"
+                               Text="A(m,k) = C(m,k)/(k+1) = C(m+1,k+1)/(m+1),  k = 1..m-2  (m >= 3)"/>
+                    <TextBox x:Name="Out2" IsReadOnly="True" TextWrapping="Wrap" FontFamily="Consolas"
+                             FontSize="14" FlowDirection="LeftToRight" VerticalScrollBarVisibility="Auto"/>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

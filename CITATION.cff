@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "RBEF: reference implementation and calculators for power sums of arithmetic sequences"
+type: software
+authors:
+  - family-names: "Abdlsahib"
+    given-names: "Ahmed Abdlmohsin"
+    orcid: "https://orcid.org/0009-0008-5099-6957"
+    affiliation: "Al-Furat Al-Awsat Technical University, Polytechnic College of Samawah, Iraq"
+repository-code: "https://github.com/AhmedHasnawe/rbef-power-sums"
+license: MIT
